@@ -7,6 +7,7 @@ on:
 
 jobs:
   plan_changes:
+    name: Plan changes (Production)
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -22,7 +23,8 @@ jobs:
           name: tfplan
           path: initial.tfplan     
           
-  apply_changes:
+  apply_changes_prod:
+    name: Apply changes (Production)
     environment: production
     needs: plan_changes
     runs-on: ubuntu-latest    
