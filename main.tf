@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket = "bankme-tfstate"
-    key    = "tfstate/current"
+    key    = "tfstate/current.tfstate"
     region = "us-east-1"
   }
 }
