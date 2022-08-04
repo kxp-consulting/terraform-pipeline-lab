@@ -5,6 +5,10 @@ terraform {
       version = "~> 4.0"
     }
   }
+  backend "s3" {
+    bucket = "tfstate"
+    region = "us-east-1"
+  }
 }
 
 provider "aws" {
