@@ -1,0 +1,14 @@
+
+name: Infrastructure Updade
+
+
+on:
+  workflow_dispatch:
+
+jobs:
+  plan_changes:    
+    runs-on: ubuntu-latest    
+    steps:
+      - name: Run terraform plan
+        run: |
+          terraform -v
