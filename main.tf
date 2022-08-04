@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "tfstate"
+    bucket = "bankme-tfstate"
     region = "us-east-1"
   }
 }
