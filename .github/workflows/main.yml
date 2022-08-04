@@ -1,5 +1,5 @@
 
-name: Infrastructure Updade
+name: Infrastructure Update
 
 
 on:
@@ -9,6 +9,7 @@ jobs:
   plan_changes:    
     runs-on: ubuntu-latest    
     steps:
+      - uses: actions/checkout@v1
       - name: Run terraform plan
         run: |
           terraform init
